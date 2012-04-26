@@ -1,0 +1,8 @@
+## Interface: 40300
+## Title: |cffC495DDTukui BadgerUI|r
+## Notes: Tukui, turned into le-awesome 5760x1080 setting
+## Author: Omglolbah
+## RequiredDeps: Tukui
+## OptionalDeps: Tukui_ConfigUI
+
+Tukui_BadgerUI.lua
