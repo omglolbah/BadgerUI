@@ -150,7 +150,18 @@ InvTukuiActionBarBackground:Point("BOTTOMRIGHT", TukuiBar3)
 -- Since t12, it's also working for druid cat stealth. (a lot requested)
 ---------------------------------------------------------------------------
 
+
 local function GetBar()
+  local shd = 7
+  if C.actionbar.ownshdbar then shd = 10 end
+
+  local Page = {
+    ["DRUID"] = "[bonusbar:1,nostealth] 7; [bonusbar:1,stealth] 8; [bonusbar:2] 8; [bonusbar:3] 9; [bonusbar:4] 10;",
+    ["WARRIOR"] = "[bonusbar:1] 7; [bonusbar:2] 8; [bonusbar:3] 9;",
+    ["PRIEST"] = "[bonusbar:1] 7;",
+    ["ROGUE"] = "[bonusbar:1] 7; [form:3] "..shd..";",
+    ["DEFAULT"] = "[bonusbar:5] 11; [bar:2] 2; [bar:3] 3; [bar:4] 4; [bar:5] 5; [bar:6] 6;",
+  }
 	local condition = Page["DEFAULT"]
 	local class = T.myclass
 	local page = Page[class]
